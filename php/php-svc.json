@@ -1,0 +1,27 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "php",
+    "creationTimestamp": null,
+    "labels": {
+      "service": "php"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "name": "9000",
+        "protocol": "TCP",
+        "port": 9000,
+        "targetPort": 9000
+      }
+    ],
+    "selector": {
+      "service": "php"
+    }
+  },
+  "status": {
+    "loadBalancer": {}
+  }
+}

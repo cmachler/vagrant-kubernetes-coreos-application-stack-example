@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -eo pipefail
+
+export REDIS=$REDIS_HOST:$REDIS_PORT
+
+echo "[nginx] booting container. REDIS: $REDIS."
+
+# Try to make initial configuration every 5 seconds until successful
+until confd -onetime -backend redis -node $REDIS -config-file /etc/confd/conf.d/counter-nginx.toml; do
+    echo "[nginx] waiting for confd to create initial nginx configuration."
+    sleep 5
+done
+
+# Put a continual polling `confd` process into the background to watch
+# for changes every 10 seconds
+confd -interval 10 -backend redis -node $REDIS -config-file /etc/confd/conf.d/counter-nginx.toml &
+echo "[nginx] confd is now monitoring Redis for changes..."
+
+# Start the Nginx service using the generated config
+echo "[nginx] starting nginx service..."
+service nginx start
+
+# Follow the logs to allow the script to continue running
+tail -f /var/log/nginx/*.log
+
