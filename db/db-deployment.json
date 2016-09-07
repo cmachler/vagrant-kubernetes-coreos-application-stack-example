@@ -28,7 +28,7 @@
         "containers": [
           {
             "name": "db",
-            "image": "evergreenitco/corp_website_example_mariadb:1.0.1",
+            "image": "evergreenitco/corp_website_example_mariadb:1.0.2",
             "ports": [
               {
                 "containerPort": 3306,

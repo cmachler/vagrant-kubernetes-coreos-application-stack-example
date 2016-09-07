@@ -14,13 +14,14 @@
         "name": "80",
         "protocol": "TCP",
         "port": 80,
-        "targetPort": 80
+        "targetPort": 80,
+        "nodePort": 30100
       }
     ],
     "selector": {
       "service": "web"
     },
-    "type": "LoadBalancer"
+    "type": "NodePort"
   },
   "status": {
     "loadBalancer": {}
