@@ -1,6 +1,6 @@
 # vagrant-kubernetes-coreos-application-stack-example
 
-This code is used for my How-To article on deploying Kubernetes running on top of CoreOS using Vagrant, and deploying an example applicaiton stack on top of Kubernetes.
+This code is used for my How-To article on deploying Kubernetes running on top of CoreOS using Vagrant, and deploying an example application stack on top of Kubernetes.
 
 ## Prerequisites
 
