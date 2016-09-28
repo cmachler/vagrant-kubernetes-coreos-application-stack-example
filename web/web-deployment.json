@@ -2,24 +2,24 @@
   "kind": "Deployment",
   "apiVersion": "extensions/v1beta1",
   "metadata": {
-    "name": "web",
+    "name": "counter-nginx-frontend",
     "creationTimestamp": null,
     "labels": {
-      "service": "web"
+      "service": "counter-nginx-frontend"
     }
   },
   "spec": {
     "replicas": 2,
     "selector": {
       "matchLabels": {
-        "service": "web"
+        "service": "counter-nginx-frontend"
       }
     },
     "template": {
       "metadata": {
         "creationTimestamp": null,
         "labels": {
-          "service": "web",
+          "service": "counter-nginx-frontend",
           "app": "nginx",
           "tier": "frontend"
         }
@@ -27,8 +27,8 @@
       "spec": {
         "containers": [
           {
-            "name": "web",
-            "image": "evergreenitco/corp_website_example_nginx:1.0.12",
+            "name": "counter-nginx-frontend",
+            "image": "evergreenitco/corp_website_example_nginx:1.0.13",
             "command": [ "confd-watch" ],
             "ports": [
               {

@@ -2,24 +2,24 @@
   "kind": "Deployment",
   "apiVersion": "extensions/v1beta1",
   "metadata": {
-    "name": "php",
+    "name": "counter-php-fpm",
     "creationTimestamp": null,
     "labels": {
-      "service": "php"
+      "service": "counter-php-fpm"
     }
   },
   "spec": {
     "replicas": 2,
     "selector": {
       "matchLabels": {
-        "service": "php"
+        "service": "counter-php-fpm"
       }
     },
     "template": {
       "metadata": {
         "creationTimestamp": null,
         "labels": {
-          "service": "php",
+          "service": "counter-php-fpm",
           "app": "php-fpm",
           "tier": "frontend"
         }
@@ -27,8 +27,8 @@
       "spec": {
         "containers": [
           {
-            "name": "php",
-            "image": "evergreenitco/corp_website_example_php:1.0.1",
+            "name": "counter-php-fpm",
+            "image": "evergreenitco/corp_website_example_php:1.0.2",
             "ports": [
               {
                 "containerPort": 9000,

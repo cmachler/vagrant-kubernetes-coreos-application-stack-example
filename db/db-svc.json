@@ -2,10 +2,10 @@
   "kind": "Service",
   "apiVersion": "v1",
   "metadata": {
-    "name": "db",
+    "name": "counter-mariadb",
     "creationTimestamp": null,
     "labels": {
-      "service": "db"
+      "service": "counter-mariadb"
     }
   },
   "spec": {
@@ -18,7 +18,7 @@
       }
     ],
     "selector": {
-      "service": "db"
+      "service": "counter-mariadb"
     }
   },
   "status": {
