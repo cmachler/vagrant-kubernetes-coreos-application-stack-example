@@ -2,10 +2,10 @@
   "kind": "Service",
   "apiVersion": "v1",
   "metadata": {
-    "name": "counter-php-fpm",
+    "name": "php-fpm-counter",
     "creationTimestamp": null,
     "labels": {
-      "service": "counter-php-fpm"
+      "service": "php-fpm-counter"
     }
   },
   "spec": {
@@ -18,7 +18,7 @@
       }
     ],
     "selector": {
-      "service": "counter-php-fpm"
+      "service": "php-fpm-counter"
     }
   },
   "status": {

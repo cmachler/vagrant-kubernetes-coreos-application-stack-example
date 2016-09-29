@@ -7,7 +7,7 @@
         // database parameters
         $username=getenv('MYSQL_USER');
         $password=getenv('MYSQL_PASSWORD');    
-        $servername=getenv('COUNTER_MARIADB_SERVICE_HOST');
+        $servername=getenv('MARIADB_COUNTER_SERVICE_HOST');
         $database=getenv('MYSQL_DATABASE');
         $tableName="countdetail";    
     

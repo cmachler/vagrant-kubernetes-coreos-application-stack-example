@@ -2,24 +2,24 @@
   "kind": "Deployment",
   "apiVersion": "extensions/v1beta1",
   "metadata": {
-    "name": "counter-mariadb",
+    "name": "mariadb-counter",
     "creationTimestamp": null,
     "labels": {
-      "service": "counter-mariadb"
+      "service": "mariadb-counter"
     }
   },
   "spec": {
     "replicas": 1,
     "selector": {
       "matchLabels": {
-        "service": "counter-mariadb"
+        "service": "mariadb-counter"
       }
     },
     "template": {
       "metadata": {
         "creationTimestamp": null,
         "labels": {
-          "service": "counter-mariadb",
+          "service": "mariadb-counter",
           "app": "mariadb",
           "tier": "backend"
         }
@@ -27,7 +27,7 @@
       "spec": {
         "containers": [
           {
-            "name": "counter-mariadb",
+            "name": "mariadb-counter",
             "image": "evergreenitco/corp_website_example_mariadb:1.0.2",
             "ports": [
               {

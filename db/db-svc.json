@@ -2,10 +2,10 @@
   "kind": "Service",
   "apiVersion": "v1",
   "metadata": {
-    "name": "counter-mariadb",
+    "name": "mariadb-counter",
     "creationTimestamp": null,
     "labels": {
-      "service": "counter-mariadb"
+      "service": "mariadb-counter"
     }
   },
   "spec": {
@@ -18,7 +18,7 @@
       }
     ],
     "selector": {
-      "service": "counter-mariadb"
+      "service": "mariadb-counter"
     }
   },
   "status": {

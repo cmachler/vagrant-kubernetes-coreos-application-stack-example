@@ -2,10 +2,10 @@
   "kind": "Service",
   "apiVersion": "v1",
   "metadata": {
-    "name": "counter-nginx-frontend",
+    "name": "nginx-counter-frontend",
     "creationTimestamp": null,
     "labels": {
-      "service": "counter-nginx-frontend"
+      "service": "nginx-counter-frontend"
     }
   },
   "spec": {
@@ -19,7 +19,7 @@
       }
     ],
     "selector": {
-      "service": "counter-nginx-frontend"
+      "service": "nginx-counter-frontend"
     },
     "type": "NodePort"
   },
