@@ -20,7 +20,7 @@
         "creationTimestamp": null,
         "labels": {
           "service": "mariadb-counter",
-          "app": "mariadb",
+          "app": "counter",
           "tier": "backend"
         }
       },

@@ -20,7 +20,7 @@
         "creationTimestamp": null,
         "labels": {
           "service": "nginx-counter-frontend",
-          "app": "nginx",
+          "app": "counter",
           "tier": "frontend"
         }
       },

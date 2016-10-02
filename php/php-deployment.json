@@ -20,7 +20,7 @@
         "creationTimestamp": null,
         "labels": {
           "service": "php-fpm-counter",
-          "app": "php-fpm",
+          "app": "counter",
           "tier": "frontend"
         }
       },
